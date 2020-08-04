@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BakingApp</string>
+    <string name="default_recipes_file">baking.json</string>
 </resources>

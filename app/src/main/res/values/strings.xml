@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">BakingApp</string>
     <string name="default_recipes_file">baking.json</string>
+    <string name="error_message">Unable to load recipes</string>
+    <string name="recipe_image_text">Recipe image</string>
+    <string name="example_text_recipe_name">Tortilla de patatas</string>
 </resources>

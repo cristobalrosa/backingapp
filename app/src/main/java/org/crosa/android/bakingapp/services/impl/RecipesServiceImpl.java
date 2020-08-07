@@ -9,12 +9,10 @@ import com.google.gson.reflect.TypeToken;
 import org.crosa.android.bakingapp.R;
 import org.crosa.android.bakingapp.client.RecipesClient;
 import org.crosa.android.bakingapp.client.exceptions.RecipesClientException;
-import org.crosa.android.bakingapp.client.impl.RetrofitRecipesClient;
-import org.crosa.android.bakingapp.services.RecipesService;
 import org.crosa.android.bakingapp.model.Recipe;
+import org.crosa.android.bakingapp.services.RecipesService;
 import org.crosa.android.bakingapp.utils.Utils;
 
-import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;

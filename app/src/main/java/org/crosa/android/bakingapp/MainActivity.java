@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -14,6 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.crosa.android.bakingapp.adapters.RecipesAdapter;
+import org.crosa.android.bakingapp.fragments.RecipeStepsFragment;
 import org.crosa.android.bakingapp.model.Recipe;
 import org.crosa.android.bakingapp.services.RecipesService;
 import org.crosa.android.bakingapp.services.ServiceLocator;
@@ -73,6 +75,12 @@ public class MainActivity extends AppCompatActivity implements RecipesAdapter.Re
     @Override
     public void onClick(Recipe recipe) {
         Log.d(TAG, "Clicked on " + recipe.getName());
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("recipe", recipe);
+
+        final Intent intent = new Intent(this, RecipeStepsActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
     private void loadRecipes() {
